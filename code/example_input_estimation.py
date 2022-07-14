@@ -250,7 +250,7 @@ zoomed_indices = zi = np.logical_and(t >= 0.005500, t <= 0.005800)
 zoom_highlight = Rectangle(
     (min(t[zi]), 0.19),
     max(t[zi]) - min(t[zi]),
-    0.05,
+    0.07,
     linestyle="--",
     linewidth=1,
     color="r",
