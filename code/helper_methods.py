@@ -107,7 +107,7 @@ def MC_inverse_iir(b, a, Uab, runs=500, dt_input=None, dt_IIR=1.0, tau=0.0):
     Nb = len(b)
 
     b_inv, a_inv, tau_inv, Uab_inv = LSIIR(
-        H, UH=UH, Nb=Na+1, Na=Nb-1, f=W / (2*np.pi), Fs=1.0 / dt_IIR, tau=tau, inv=True, mc_runs=runs
+        H, UH=UH, Nb=Na+2, Na=Nb, f=W / (2*np.pi), Fs=1.0 / dt_IIR, tau=tau, inv=True, mc_runs=runs
     )
 
     # gain correction
