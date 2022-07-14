@@ -4,11 +4,11 @@
 
 The above code examples are executed using the following packages:
 
-- Python 3.7.7
-- NumPy 1.21.4
-- SciPy 1.7.3
-- Matplotlib 3.5.0
-- PyDynamic 2.1.0
+- Python 3.9.2
+- NumPy 1.23.1
+- SciPy 1.8.1
+- Matplotlib 3.5.2
+- PyDynamic 2.2.0
 
 To set up a programming environment, please refer to the official Python documentation:
 
