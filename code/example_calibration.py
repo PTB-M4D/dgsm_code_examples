@@ -73,6 +73,7 @@ UH_dut_phase = np.angle(real_imag_2_complex(UH_dut_diag))
 ###############################
 ### visualization part ########
 ###############################
+save_figures = False
 
 # print numerical values
 np.set_printoptions(precision=2)
@@ -114,9 +115,10 @@ ax[1].set_xlabel("time (s)")
 ax[1].set_ylabel("acceleration signal")
 
 # generate (*@ \cref{fig:dynunc_calibration_input} @*)
-fig.savefig("calibration_input.pdf", bbox_inches="tight")
-#plt.show()
-
+if save_figures: 
+    fig.savefig("calibration_input.pdf", bbox_inches="tight")
+else:
+    plt.show()
 
 # visualize and compare fitted transfer behavior in the frequency domain
 fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(8, 5), sharex=True)
@@ -155,5 +157,7 @@ ax[1].set_xlabel("frequency (Hz)")
 ax[1].set_ylabel("frequency response (phase)")
 
 # generate (*@ \cref{fig:dynunc_calibration_result} @*)
-# fig.savefig("calibration_result.pdf", bbox_inches="tight")
-plt.show()
+if save_figures: 
+    fig.savefig("calibration_result.pdf", bbox_inches="tight")
+else:
+    plt.show()
