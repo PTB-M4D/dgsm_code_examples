@@ -1,5 +1,7 @@
 # Code Examples for the Book "Dynamic Measuring Systems"
 
+[![DOI](https://zenodo.org/badge/500731495.svg)](https://zenodo.org/badge/latestdoi/500731495)
+
 ## Pre-Requistes
 
 The above code examples are executed using the following packages:
