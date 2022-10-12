@@ -73,6 +73,7 @@ UH_dut_phase = np.angle(real_imag_2_complex(UH_dut_diag))
 ###############################
 ### visualization part ########
 ###############################
+save_figures = False
 
 # print numerical values
 np.set_printoptions(precision=2)
@@ -83,7 +84,7 @@ print(f"{Uab_discrete=}\n")
 
 # visualize time series of signals used for calibration
 fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(8, 5))
-ax[0].plot(t, acc_true, "k", label="true", zorder=100)
+ax[0].plot(t, acc_true, "k", label="measurand", zorder=100)
 ax[0].plot(t, acc_ref, "r", label="reference", zorder=99)
 ax[0].plot(t, acc_dut, "b", label="device under test")
 
@@ -104,7 +105,7 @@ ax[0].add_patch(zoom_highlight)
 ax[0].set_ylabel("acceleration signal")
 ax[0].legend(loc="upper left")
 
-ax[1].plot(t[zi], acc_true[zi], "k", label="true", zorder=100)
+ax[1].plot(t[zi], acc_true[zi], "k", label="measurand", zorder=100)
 ax[1].plot(t[zi], acc_ref[zi], "r", label="reference", zorder=99)
 ax[1].fill_between(
     t[zi], acc_ref[zi] - u_ref, acc_ref[zi] + u_ref, color="r", alpha=0.2, zorder=98
@@ -114,9 +115,10 @@ ax[1].set_xlabel("time (s)")
 ax[1].set_ylabel("acceleration signal")
 
 # generate (*@ \cref{fig:dynunc_calibration_input} @*)
-# fig.savefig("../images/calibration_input.pdf", bbox_inches="tight")
-plt.show()
-
+if save_figures: 
+    fig.savefig("calibration_input.pdf", bbox_inches="tight")
+else:
+    plt.show()
 
 # visualize and compare fitted transfer behavior in the frequency domain
 fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(8, 5), sharex=True)
@@ -155,5 +157,7 @@ ax[1].set_xlabel("frequency (Hz)")
 ax[1].set_ylabel("frequency response (phase)")
 
 # generate (*@ \cref{fig:dynunc_calibration_result} @*)
-# fig.savefig("../images/calibration_result.pdf", bbox_inches="tight")
-plt.show()
+if save_figures: 
+    fig.savefig("calibration_result.pdf", bbox_inches="tight")
+else:
+    plt.show()

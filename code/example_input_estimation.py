@@ -152,7 +152,7 @@ ax[1].set_ylabel("frequency response (phase)")
 
 # generate (*@ \cref{fig:dynunc_inverse_estimation} @*)
 if save_figures: 
-    fig.savefig("../images/inverse_estimation.pdf", bbox_inches="tight")
+    fig.savefig("inverse_estimation.pdf", bbox_inches="tight")
 else:
     plt.show()
 
@@ -181,7 +181,7 @@ ax[1].set_ylabel("unc. of frequency response (phase)")
 
 # generate (*@ \cref{fig:dynunc_inverse_estimation} @*)
 if save_figures: 
-    fig.savefig("../images/inverse_estimation_unc_only.pdf", bbox_inches="tight")
+    fig.savefig("inverse_estimation_unc_only.pdf", bbox_inches="tight")
 else:
     plt.show()
 
@@ -189,7 +189,7 @@ else:
 
 # visualize the input estimation
 fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(9, 6))
-ax[0].plot(t, acc_true, "k", label="true", zorder=100)
+ax[0].plot(t, acc_true, "k", label="measurand", zorder=100)
 ax[0].plot(t, acc_dut, "b", label="DUT indicated", zorder=98)
 ax[0].plot(t, acc_comp, "r", label="DUT compensated", zorder=99)
 
@@ -210,7 +210,7 @@ ax[0].add_patch(zoom_highlight)
 ax[0].set_ylabel("acceleration signal")
 ax[0].legend()
 
-ax[1].plot(t[zi], acc_true[zi], "k", label="true", zorder=100)
+ax[1].plot(t[zi], acc_true[zi], "k", label="measurand", zorder=100)
 ax[1].plot(t[zi], acc_dut[zi], "b", label="DUT indicated", zorder=96)
 ax[1].fill_between(
     t[zi],
@@ -234,14 +234,14 @@ ax[1].set_ylabel("acceleration signal")
 
 # generate (*@ \cref{fig:dynunc_input_estimation} @*)
 if save_figures: 
-    fig.savefig("../images/input_estimation.pdf", bbox_inches="tight")
+    fig.savefig("input_estimation.pdf", bbox_inches="tight")
 else:
     plt.show()
 
 
 # visualize the input estimation
 fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(9, 6))
-#ax[0].plot(t, np.zeros_like(t), "k", label="true", zorder=100)
+#ax[0].plot(t, np.zeros_like(t), "k", label="measurand", zorder=100)
 ax[0].plot(t, Uacc_dut, "b", label="DUT indicated", zorder=98)
 ax[0].plot(t, Uacc_comp, "r", label="DUT compensated", zorder=99)
 
@@ -250,7 +250,7 @@ zoomed_indices = zi = np.logical_and(t >= 0.005500, t <= 0.005800)
 zoom_highlight = Rectangle(
     (min(t[zi]), 0.19),
     max(t[zi]) - min(t[zi]),
-    0.05,
+    0.07,
     linestyle="--",
     linewidth=1,
     color="r",
@@ -262,7 +262,7 @@ ax[0].add_patch(zoom_highlight)
 ax[0].set_ylabel("unc. of acceleration signal")
 ax[0].legend()
 
-#ax[1].plot(t[zi], np.zeros_like(t[zi]), "k", label="true", zorder=100)
+#ax[1].plot(t[zi], np.zeros_like(t[zi]), "k", label="measurand", zorder=100)
 ax[1].plot(t[zi], Uacc_dut[zi], "b", label="DUT indicated", zorder=96)
 ax[1].plot(t[zi], Uacc_comp[zi], "r", label="DUT compensated", zorder=98)
 
@@ -271,7 +271,7 @@ ax[1].set_ylabel("unc. of acceleration signal")
 
 # generate (*@ \cref{fig:dynunc_input_estimation} @*)
 if save_figures: 
-    fig.savefig("../images/input_estimation_unc_only.pdf", bbox_inches="tight")
+    fig.savefig("input_estimation_unc_only.pdf", bbox_inches="tight")
 else:
     plt.show()
 
