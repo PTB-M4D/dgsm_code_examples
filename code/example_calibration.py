@@ -102,7 +102,7 @@ zoom_highlight = Rectangle(
     zorder=101,
 )
 ax[0].add_patch(zoom_highlight)
-ax[0].set_ylabel("acceleration signal")
+ax[0].set_ylabel("acceleration signal (a.u.)")
 ax[0].legend(loc="upper left")
 
 ax[1].plot(t[zi], acc_true[zi], "k", label="measurand", zorder=100)
@@ -112,7 +112,7 @@ ax[1].fill_between(
 )
 ax[1].plot(t[zi], acc_dut[zi], "b", label="device under test")
 ax[1].set_xlabel("time (s)")
-ax[1].set_ylabel("acceleration signal")
+ax[1].set_ylabel("acceleration signal (a.u.)")
 
 # generate (*@ \cref{fig:dynunc_calibration_input} @*)
 if save_figures: 
@@ -136,7 +136,7 @@ ax[0].fill_between(
 
 ax[0].set_xscale("log")
 ax[0].set_yscale("log")
-ax[0].set_ylabel("frequency response (abs)")
+ax[0].set_ylabel("frequency response (abs) (a.u.)")
 ax[0].legend()
 
 ax[1].plot(f, np.angle(H_true), "k", label="true transfer function of DUT", zorder=100)
@@ -154,7 +154,7 @@ ax[1].fill_between(
 ax[1].set_xscale("log")
 ax[1].set_yscale("linear")
 ax[1].set_xlabel("frequency (Hz)")
-ax[1].set_ylabel("frequency response (phase)")
+ax[1].set_ylabel("frequency response (phase) (rad)")
 
 # generate (*@ \cref{fig:dynunc_calibration_result} @*)
 if save_figures: 

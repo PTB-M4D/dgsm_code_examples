@@ -113,7 +113,7 @@ ax[0].fill_between(
 
 ax[0].set_xscale("log")
 ax[0].set_yscale("log")
-ax[0].set_ylabel("frequency response (abs)")
+ax[0].set_ylabel("frequency response (abs) (a.u.)")
 ax[0].legend()
 
 ax[1].plot(f, np.angle(H_true), "k", label="true DUT", zorder=100)
@@ -148,7 +148,7 @@ ax[1].fill_between(
 ax[1].set_xscale("log")
 ax[1].set_yscale("linear")
 ax[1].set_xlabel("frequency (Hz)")
-ax[1].set_ylabel("frequency response (phase)")
+ax[1].set_ylabel("frequency response (phase) (rad)")
 
 # generate (*@ \cref{fig:dynunc_inverse_estimation} @*)
 if save_figures: 
@@ -166,7 +166,7 @@ ax[0].plot(f, UH_reg_abs, "c", label="regularized DUT", zorder=97)
 
 ax[0].set_xscale("log")
 ax[0].set_yscale("log")
-ax[0].set_ylabel("unc. of frequency response (abs)")
+ax[0].set_ylabel("unc. of frequency response (abs) (a.u.)")
 ax[0].legend()
 
 ax[1].plot(f, np.zeros_like(f), "k", label="true DUT", zorder=100)
@@ -177,7 +177,7 @@ ax[1].plot(f, UH_reg_phase, "c", label="regularized DUT", zorder=97)
 ax[1].set_xscale("log")
 ax[1].set_yscale("linear")
 ax[1].set_xlabel("frequency (Hz)")
-ax[1].set_ylabel("unc. of frequency response (phase)")
+ax[1].set_ylabel("unc. of frequency response (phase) (rad)")
 
 # generate (*@ \cref{fig:dynunc_inverse_estimation} @*)
 if save_figures: 
@@ -207,7 +207,7 @@ zoom_highlight = Rectangle(
     zorder=101,
 )
 ax[0].add_patch(zoom_highlight)
-ax[0].set_ylabel("acceleration signal")
+ax[0].set_ylabel("acceleration signal (a.u.)")
 ax[0].legend()
 
 ax[1].plot(t[zi], acc_true[zi], "k", label="measurand", zorder=100)
@@ -230,7 +230,7 @@ ax[1].fill_between(
     zorder=97,
 )
 ax[1].set_xlabel("time (s)")
-ax[1].set_ylabel("acceleration signal")
+ax[1].set_ylabel("acceleration signal (a.u.)")
 
 # generate (*@ \cref{fig:dynunc_input_estimation} @*)
 if save_figures: 
@@ -259,7 +259,7 @@ zoom_highlight = Rectangle(
     zorder=101,
 )
 ax[0].add_patch(zoom_highlight)
-ax[0].set_ylabel("unc. of acceleration signal")
+ax[0].set_ylabel("unc. of acceleration signal (a.u.)")
 ax[0].legend()
 
 #ax[1].plot(t[zi], np.zeros_like(t[zi]), "k", label="measurand", zorder=100)
@@ -267,7 +267,7 @@ ax[1].plot(t[zi], Uacc_dut[zi], "b", label="DUT indicated", zorder=96)
 ax[1].plot(t[zi], Uacc_comp[zi], "r", label="DUT compensated", zorder=98)
 
 ax[1].set_xlabel("time (s)")
-ax[1].set_ylabel("unc. of acceleration signal")
+ax[1].set_ylabel("unc. of acceleration signal (a.u.)")
 
 # generate (*@ \cref{fig:dynunc_input_estimation} @*)
 if save_figures: 

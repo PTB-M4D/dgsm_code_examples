@@ -83,13 +83,13 @@ ax[0].fill_between(
 
 ax[0].set_xscale("log")
 ax[0].set_yscale("log")
-ax[0].set_ylabel("frequency response")
+ax[0].set_ylabel("frequency response (a.u.)")
 ax[0].legend()
 
 ax[1].plot(W_conti / (2 * np.pi), UH_conti_diag, color="k")
 ax[1].plot(W_discrete / (2 * np.pi), UH_discrete_diag, "or", markersize=4)
-ax[0].set_xlabel("frequency (Hz)")
-ax[1].set_ylabel("uncertainty")
+ax[1].set_xlabel("frequency (Hz)")
+ax[1].set_ylabel("uncertainty (a.u.)")
 
 # generate (*@ \cref{fig:dynunc_frequency_response} @*)
 # fig.savefig("../images/frequency_response.pdf", bbox_inches="tight")
@@ -108,13 +108,13 @@ ax[0].fill_between(
     alpha=0.2,
 )
 
-ax[0].set_ylabel("step response")
+ax[0].set_ylabel("step response (a.u.)")
 ax[0].legend()
 
 
 ax[1].plot(t_discrete, uh_discrete_diag, color="k")
 ax[1].set_xlabel("time (s)")
-ax[1].set_ylabel("uncertainty")
+ax[1].set_ylabel("uncertainty (a.u.)")
 
 # generate (*@ \cref{fig:dynunc_impulse_response} @*)
 # fig.savefig("../images/impulse_response.pdf", bbox_inches="tight")
