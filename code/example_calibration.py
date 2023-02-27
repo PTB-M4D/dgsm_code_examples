@@ -73,7 +73,7 @@ UH_dut_phase = np.angle(real_imag_2_complex(UH_dut_diag))
 ###############################
 ### visualization part ########
 ###############################
-save_figures = False
+save_figures = True
 
 # print numerical values
 np.set_printoptions(precision=2)

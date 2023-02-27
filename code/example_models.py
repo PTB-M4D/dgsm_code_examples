@@ -49,7 +49,7 @@ t_discrete, h_discrete, uh_discrete_diag = MC_impulse(
 ###############################
 ### visualization part ########
 ###############################
-save_figures = False
+save_figures = True
 
 # print numerical values
 np.set_printoptions(precision=2)
