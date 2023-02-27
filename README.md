@@ -34,6 +34,14 @@ Visualize and perform a calibration for an acceleration sensor based on simulate
 
 Visualize and perform a input estimation of an acceleration sensor.
 
+### Example `code\example_aliasing.py`
+
+Visualize the aliasing effect when discretizing an analogue transfer function (or analogue filter)
+
+### Example `code\example_regularization_lowpass.py`
+
+Visualize the effect of chosing the lowpass filter cut-off as a means of regularization in deconvolution
+
 ### Example `code\helper_methods.py`
 
 Monte-Carlo helper functions used in the examples.
