@@ -136,7 +136,7 @@ ax[0].fill_between(
 
 ax[0].set_xscale("log")
 ax[0].set_yscale("log")
-ax[0].set_ylabel("frequency response (abs) (a.u.)")
+ax[0].set_ylabel("freq. response (abs) (a.u.)")
 ax[0].legend()
 
 ax[1].plot(f, np.angle(H_true), "k", label="true transfer function of DUT", zorder=100)
@@ -154,7 +154,7 @@ ax[1].fill_between(
 ax[1].set_xscale("log")
 ax[1].set_yscale("linear")
 ax[1].set_xlabel("frequency (Hz)")
-ax[1].set_ylabel("frequency response (phase) (rad)")
+ax[1].set_ylabel("freq. response (phase) (rad)")
 
 # generate (*@ \cref{fig:dynunc_calibration_result} @*)
 if save_figures: 

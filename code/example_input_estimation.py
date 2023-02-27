@@ -113,7 +113,7 @@ ax[0].fill_between(
 
 ax[0].set_xscale("log")
 ax[0].set_yscale("log")
-ax[0].set_ylabel("frequency response (abs) (a.u.)")
+ax[0].set_ylabel("freq. response (abs) (a.u.)")
 ax[0].legend()
 
 ax[1].plot(f, np.angle(H_true), "k", label="true DUT", zorder=100)
@@ -148,7 +148,7 @@ ax[1].fill_between(
 ax[1].set_xscale("log")
 ax[1].set_yscale("linear")
 ax[1].set_xlabel("frequency (Hz)")
-ax[1].set_ylabel("frequency response (phase) (rad)")
+ax[1].set_ylabel("freq. response (phase) (rad)")
 
 # generate (*@ \cref{fig:dynunc_inverse_estimation} @*)
 if save_figures: 
@@ -166,7 +166,7 @@ ax[0].plot(f, UH_reg_abs, "c", label="regularized DUT", zorder=97)
 
 ax[0].set_xscale("log")
 ax[0].set_yscale("log")
-ax[0].set_ylabel("unc. of frequency response (abs) (a.u.)")
+ax[0].set_ylabel("unc. of freq. response (abs) (a.u.)")
 ax[0].legend()
 
 ax[1].plot(f, np.zeros_like(f), "k", label="true DUT", zorder=100)
@@ -177,7 +177,7 @@ ax[1].plot(f, UH_reg_phase, "c", label="regularized DUT", zorder=97)
 ax[1].set_xscale("log")
 ax[1].set_yscale("linear")
 ax[1].set_xlabel("frequency (Hz)")
-ax[1].set_ylabel("unc. of frequency response (phase) (rad)")
+ax[1].set_ylabel("unc. of freq. response (phase) (rad)")
 
 # generate (*@ \cref{fig:dynunc_inverse_estimation} @*)
 if save_figures: 
