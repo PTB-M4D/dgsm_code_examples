@@ -58,4 +58,4 @@ ax[1].set_ylabel("unc. of estimate (a.u.)")
 
 plt.tight_layout()
 #plt.show()
-plt.savefig("../images/full_example.pdf")
+plt.savefig("full_example.pdf")

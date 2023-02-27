@@ -49,6 +49,7 @@ t_discrete, h_discrete, uh_discrete_diag = MC_impulse(
 ###############################
 ### visualization part ########
 ###############################
+save_figures = False
 
 # print numerical values
 np.set_printoptions(precision=2)
@@ -92,8 +93,10 @@ ax[1].set_xlabel("frequency (Hz)")
 ax[1].set_ylabel("uncertainty (a.u.)")
 
 # generate (*@ \cref{fig:dynunc_frequency_response} @*)
-# fig.savefig("../images/frequency_response.pdf", bbox_inches="tight")
-plt.show()
+if save_figures: 
+    fig.savefig("frequency_response.pdf", bbox_inches="tight")
+else:
+    plt.show()
 
 
 # visualize impulse response
@@ -117,5 +120,7 @@ ax[1].set_xlabel("time (s)")
 ax[1].set_ylabel("uncertainty (a.u.)")
 
 # generate (*@ \cref{fig:dynunc_impulse_response} @*)
-# fig.savefig("../images/impulse_response.pdf", bbox_inches="tight")
-plt.show()
+if save_figures: 
+    fig.savefig("impulse_response.pdf", bbox_inches="tight")
+else:
+    plt.show()
