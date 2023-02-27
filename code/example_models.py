@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.linalg.misc import norm
+from scipy.linalg import norm
 
 from helper_methods import MC_cont2discrete, MC_freq, MC_impulse
 
